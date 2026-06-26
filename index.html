@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BODYTEE Hero Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --cream:#F5F0E5; --cream-dark:#EFE9DF; --beige:#E8DDD0; --olive:#6B7C5C; --olive-dark:#4E5C42; --brown:#5C3D2E; --brown-mid:#8B6355; --charcoal:#28252B; }
+  *{box-sizing:border-box}
+  body{ margin:0; padding:0; font-family:'Inter',sans-serif; background:var(--cream); color:var(--charcoal); -webkit-font-smoothing:antialiased; }
+  header{ padding:32px 24px 24px; text-align:center; border-bottom:1px solid var(--beige); background:var(--cream-dark); }
+  header h1{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:30px; margin:0 0 6px; }
+  header p{ margin:0; color:var(--brown-mid); font-size:14px; }
+  .options{ display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:32px 24px; max-width:1400px; margin:0 auto; }
+  @media (max-width:800px){ .options{ grid-template-columns:1fr; } }
+  .opt{ background:#fff; border:1px solid var(--beige); border-radius:16px; overflow:hidden; box-shadow:0 10px 40px -20px rgba(40,37,43,.15); }
+  .opt-header{ padding:16px 20px; background:var(--cream-dark); border-bottom:1px solid var(--beige); }
+  .opt-header h2{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:20px; margin:0 0 4px; }
+  .opt-header p{ margin:0; font-size:13px; color:var(--brown-mid); }
+  .badge{ display:inline-block; margin-top:8px; background:var(--olive); color:#fff; padding:3px 10px; border-radius:999px; font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
+  .opt video{ display:block; width:100%; height:auto; background:#000; }
+  .opt .still{ display:block; width:100%; height:auto; }
+  .copy{ position:relative; padding:60px 24px 40px; min-height:360px; background-size:cover; background-position:center 25%; display:flex; align-items:flex-end; }
+  .copy::before{ content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(40,37,43,.2) 0%, rgba(40,37,43,.5) 50%, rgba(40,37,43,.92) 100%); }
+  .copy-inner{ position:relative; z-index:2; color:var(--cream); max-width:520px; }
+  .copy-inner .eyebrow{ font-size:11px; font-weight:600; letter-spacing:.25em; text-transform:uppercase; color:rgba(245,240,229,.85); margin-bottom:12px; }
+  .copy-inner h3{ font-family:'Cormorant Garamond',serif; font-weight:600; font-size:30px; line-height:1.05; margin:0 0 12px; }
+  .copy-inner p{ font-size:13px; line-height:1.55; color:rgba(245,240,229,.92); margin:0 0 16px; max-width:380px; }
+  .copy-inner .btn{ display:inline-block; padding:11px 20px; border-radius:999px; background:var(--cream); color:var(--charcoal); font-weight:600; font-size:12px; }
+  .copy-inner .btn-outline{ display:inline-block; padding:11px 20px; border-radius:999px; background:transparent; color:var(--cream); border:1.5px solid var(--cream); font-weight:600; font-size:12px; margin-left:8px; }
+  footer{ padding:24px; text-align:center; color:var(--brown-mid); font-size:13px; border-top:1px solid var(--beige); }
+  footer .pill{ display:inline-block; margin:0 4px; padding:3px 10px; border-radius:999px; background:var(--cream-dark); color:var(--charcoal); font-weight:600; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Hero preview — pick your favourite</h1>
+  <p>Two candidates for the BODYTEE hero. Left is your uploaded footage slowed 2× and looped; right is an AI-generated still of the same scene as a fallback.</p>
+</header>
+
+<div class="options">
+  <div class="opt">
+    <div class="opt-header">
+      <h2>Option A · Real footage (slow motion)</h2>
+      <p>Your C0179-1a7e4b9e.mov, slowed 2×. Loops as-is with no cropping or effects — please tell me if you want a different crop, trim, or color grade.</p>
+      <span class="badge">Recommended</span>
+    </div>
+    <video autoplay muted loop playsinline poster="hero-real-poster.jpg" preload="auto">
+      <source src="hero-real.mp4" type="video/mp4">
+    </video>
+    <div class="copy" style="background-image:url('hero-real-poster.jpg')">
+      <div class="copy-inner">
+        <div class="eyebrow">Train with Taylor</div>
+        <h3>For every body <em style="color:#C9B49A">in motion.</em></h3>
+        <p>Structured training and supportive wellness, built around your body. No toxic gym culture, ever.</p>
+        <a class="btn">Take the Quiz →</a>
+        <a class="btn-outline">Get the Program</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="opt">
+    <div class="opt-header">
+      <h2>Option B · AI-generated still (fallback)</h2>
+      <p>Same scene, same camera angle — generated in case your video doesn't fit (file size, motion, cropping).</p>
+    </div>
+    <img class="still" src="../documents/bodytee-collab-NUTl8pdA/public/img/hero-preview.jpg" alt="AI hero fallback">
+    <div class="copy" style="background-image:url('../documents/bodytee-collab-NUTl8pdA/public/img/hero-preview.jpg')">
+      <div class="copy-inner">
+        <div class="eyebrow">Train with Taylor</div>
+        <h3>For every body <em style="color:#C9B49A">in motion.</em></h3>
+        <p>Structured training and supportive wellness, built around your body. No toxic gym culture, ever.</p>
+        <a class="btn">Take the Quiz →</a>
+        <a class="btn-outline">Get the Program</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="pill">A</span> Real slow-mo footage · <span class="pill">B</span> AI still
+</footer>
+</body>
+</html>
